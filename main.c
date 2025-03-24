@@ -1,5 +1,14 @@
 /*
  * Game plan
- * Step one:
- * Figure out what optimal play means and how to find it (i.e. write an engine of some kind)
+ * We need to figure out how to solve the game
+ * 	What is optimal play, how can we achieve it?
+ * 	Seems to be game theory...
+ * 	Grundy numbers...
+ *
+ * 	Additionally, start coding some sort of simulator
  */
+
+int main()
+{
+	return 0;
+}
