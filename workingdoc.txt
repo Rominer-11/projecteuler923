@@ -1,0 +1,4 @@
+Current discoveries:
+
+
+Even board + even board = Down wins
