@@ -8,7 +8,7 @@ public class board
 	private int a;
 	private int b;
 	private int k;
-	private char[][] board;
+	private int[][] board;
 
 	public board(int a, int b, int k)
 	{
@@ -16,9 +16,11 @@ public class board
 		this.b = b;
 		this.k = k;
 
-		this.board = new char[a+1][b+1];
+		this.board = new int[a * k][b * k];
 
 		this.init();
+
+		this.printBoard();
 	}
 
 	/**
@@ -26,15 +28,17 @@ public class board
 	 */
 	public void init()
 	{
-		int stepWidth = b / k;
-		int stepHeight = a / k;
+		int step = 0;
 
-		for (int step = 0; step < k; step++)
+		for (int row = 0; row < board.length; row++)
 		{
-			for (int row = 0; row < stepHeight; row++)
+			for (int col = 0; col < (board[0].length - (step * b)); col++)
 			{
-				printBoard();
-				board[row][board.length - (step * stepWidth) - 1] = 'o';
+				board[row][col] = 1;
+			}
+			if ((row + 1) % a == 0)
+			{
+				step++;
 			}
 		}
 	}
